@@ -54,7 +54,7 @@ function Hero() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
-                className="text-[clamp(3.35rem,15vw,8.5rem)] font-extrabold leading-[0.84] tracking-[-0.075em] sm:text-[clamp(4rem,11vw,8.5rem)] lg:text-[clamp(4rem,8vw,8.5rem)]"
+                className="whitespace-nowrap text-[clamp(2.65rem,12vw,4.5rem)] font-extrabold leading-[0.84] tracking-[-0.075em] sm:text-[clamp(4rem,11vw,8.5rem)] lg:text-[clamp(4rem,8vw,8.5rem)]"
               >
                 SOUMYADEEP
               </motion.h1>
@@ -63,7 +63,7 @@ function Hero() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-[clamp(3.35rem,15vw,8.5rem)] font-extrabold leading-[0.84] tracking-[-0.075em] text-white/20 sm:text-[clamp(4rem,11vw,8.5rem)] lg:text-[clamp(4rem,8vw,8.5rem)]"
+                className="whitespace-nowrap text-[clamp(2.65rem,12vw,4.5rem)] font-extrabold leading-[0.84] tracking-[-0.075em] text-white/20 sm:text-[clamp(4rem,11vw,8.5rem)] lg:text-[clamp(4rem,8vw,8.5rem)]"
               >
                 DAS<span className="text-[var(--accent)]">.</span>
               </motion.h1>
