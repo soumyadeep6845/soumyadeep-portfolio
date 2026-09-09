@@ -9,12 +9,8 @@ function Navbar() {
       className="fixed top-0 left-0 right-0 z-50"
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-10">
-        
         {/* Logo */}
-        <a
-          href="#home"
-          className="text-lg font-bold tracking-tighter"
-        >
+        <a href="#home" className="text-lg font-bold tracking-tighter">
           SD<span className="text-white/40">.</span>
         </a>
 
@@ -32,6 +28,13 @@ function Navbar() {
             className="text-sm text-white/60 transition hover:text-white"
           >
             Experience
+          </a>
+
+          <a
+            href="#skills"
+            className="text-sm text-white/60 transition hover:text-white"
+          >
+            Skills
           </a>
 
           <a
@@ -58,7 +61,6 @@ function Navbar() {
         >
           Resume ↗
         </a>
-
       </div>
     </motion.nav>
   );

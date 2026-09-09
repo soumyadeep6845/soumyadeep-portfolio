@@ -2,6 +2,10 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import RecruiterSnapshot from "./components/RecruiterSnapshot";
 import Impact from "./components/Impact";
+import Experience from "./components/Experience";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import About from "./components/About";
 
 function App() {
   return (
@@ -13,6 +17,14 @@ function App() {
       <RecruiterSnapshot />
 
       <Impact />
+
+      <Experience />
+
+      <Projects />
+
+      <Skills />
+
+      <About />
     </main>
   );
 }
