@@ -68,7 +68,7 @@ function Projects() {
           className="mb-24"
         >
           <p className="mb-4 text-xs uppercase tracking-[0.3em] text-white/30">
-            02 / Selected Work
+            <span className="text-[var(--accent)]">02</span> / Selected Work
           </p>
 
           <h2 className="max-w-4xl text-5xl font-bold leading-[0.95] tracking-[-0.05em] md:text-7xl">
@@ -93,7 +93,7 @@ function Projects() {
               className="group"
             >
               <div
-                className={`overflow-hidden border border-white/10 ${
+                className={`overflow-hidden border border-white/10 transition-all duration-500 group-hover:border-white/20 group-hover:-translate-y-1 ${
                   project.featured ? "bg-white/[0.025]" : "bg-white/[0.015]"
                 }`}
               >
@@ -143,7 +143,7 @@ function Projects() {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition hover:scale-105"
+                        className="rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-medium text-white transition duration-300 hover:scale-105 hover:brightness-110"
                       >
                         GitHub ↗
                       </a>

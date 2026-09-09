@@ -15,7 +15,7 @@ function Contact() {
           transition={{ duration: 0.8 }}
         >
           <p className="mb-8 text-xs uppercase tracking-[0.3em] text-white/30">
-            06 / Get In Touch
+            <span className="text-[var(--accent)]">07</span> / Get In Touch
           </p>
 
           <h2 className="max-w-5xl text-[clamp(4rem,10vw,9rem)] font-bold leading-[0.85] tracking-[-0.07em]">
@@ -79,6 +79,15 @@ function Contact() {
             </div>
           </motion.div>
         </div>
+
+        <motion.a
+          href="#home"
+          whileHover={{ y: -4 }}
+          className="mt-16 inline-flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-white/30 transition-colors hover:text-white"
+        >
+          Back to top
+          <span className="text-[var(--accent)]">↑</span>
+        </motion.a>
 
         {/* Footer */}
         <footer className="mt-32 border-t border-white/10 pt-8">

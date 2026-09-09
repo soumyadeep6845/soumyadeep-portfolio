@@ -19,7 +19,8 @@ const metrics = [
   {
     value: "~40%",
     label: "Vulnerability Reduction",
-    description: "Reduced SonarQube and Snyk vulnerabilities across repositories.",
+    description:
+      "Reduced SonarQube and Snyk vulnerabilities across repositories.",
   },
 ];
 
@@ -30,7 +31,6 @@ function Impact() {
       className="border-t border-white/10 px-6 py-32 lg:px-10"
     >
       <div className="mx-auto max-w-7xl">
-
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -41,7 +41,7 @@ function Impact() {
         >
           <div>
             <p className="mb-4 text-xs uppercase tracking-[0.3em] text-white/30">
-              01 / Impact
+              <span className="text-[var(--accent)]">01</span> / Impact
             </p>
 
             <h2 className="max-w-xl text-5xl font-bold leading-[0.95] tracking-[-0.05em] md:text-7xl">
@@ -77,10 +77,7 @@ function Impact() {
               className="group min-h-[260px] border-b border-r border-white/10 p-8 transition-colors duration-300 hover:bg-white/[0.03] md:p-10"
             >
               <div className="flex h-full flex-col justify-between">
-
-                <span className="text-xs text-white/30">
-                  0{index + 1}
-                </span>
+                <span className="text-xs text-white/30">0{index + 1}</span>
 
                 <div>
                   <h3 className="text-4xl font-semibold tracking-tight md:text-5xl">
@@ -95,12 +92,10 @@ function Impact() {
                     {metric.description}
                   </p>
                 </div>
-
               </div>
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );

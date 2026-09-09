@@ -5,7 +5,7 @@ const experiences = [
     period: "MAY 2024 — NOV 2025",
     role: "Senior Software Engineer",
     company: "VALUELABS SOLUTIONS LLP",
-    location: "Hyderabad, India",
+    location: "Hyderabad, Telangana, India · Hybrid",
     description:
       "Worked on backend and full-stack engineering, focusing on Java-based services, automation, application quality and production-ready software delivery.",
     achievements: [
@@ -30,7 +30,7 @@ const experiences = [
     period: "JAN 2023 — APR 2024",
     role: "Software Engineer",
     company: "VALUELABS SOLUTIONS LLP",
-    location: "Hyderabad, India",
+    location: "Hyderabad, Telangana, India · Hybrid",
     description:
       "Developed and maintained software applications with a focus on backend services, APIs, databases and engineering quality.",
     achievements: [
@@ -45,7 +45,7 @@ const experiences = [
     period: "JAN 2022 — APR 2022",
     role: "Software Developer",
     company: "HighRadius · Internship",
-    location: "Bhubaneswar, Odisha · Remote",
+    location: "Bhubaneswar, Odisha, India · Remote",
     description:
       "Completed the Highway to HighRadius Internship Program, building and deploying an AI-enabled Fintech B2B cloud application as a full-stack web-based product.",
     achievements: [
@@ -81,7 +81,7 @@ function Experience() {
           className="mb-24"
         >
           <p className="mb-4 text-xs uppercase tracking-[0.3em] text-white/30">
-            03 / Experience
+            <span className="text-[var(--accent)]">03</span> / Experience
           </p>
 
           <h2 className="max-w-4xl text-5xl font-bold leading-[0.95] tracking-[-0.05em] md:text-7xl">

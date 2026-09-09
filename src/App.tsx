@@ -7,6 +7,7 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Achievements from "./components/Achievements";
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
       <Experience />
 
       <Skills />
+
+      <Achievements />
 
       <About />
 

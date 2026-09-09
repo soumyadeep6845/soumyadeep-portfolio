@@ -30,26 +30,12 @@ const skillGroups = [
   {
     number: "05",
     title: "Cloud & DevOps",
-    skills: [
-      "Docker",
-      "AWS",
-      "CI/CD",
-      "Gradle",
-      "Maven",
-      "Bamboo",
-    ],
+    skills: ["Docker", "AWS", "CI/CD", "Gradle", "Maven", "Bamboo"],
   },
   {
     number: "06",
     title: "Quality & Engineering",
-    skills: [
-      "JUnit",
-      "Mockito",
-      "SonarQube",
-      "Snyk",
-      "Git",
-      "JIRA",
-    ],
+    skills: ["JUnit", "Mockito", "SonarQube", "Snyk", "Git", "JIRA"],
   },
 ];
 
@@ -60,7 +46,6 @@ function Skills() {
       className="border-t border-white/10 px-6 py-32 lg:px-10"
     >
       <div className="mx-auto max-w-7xl">
-
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -71,7 +56,7 @@ function Skills() {
         >
           <div>
             <p className="mb-4 text-xs uppercase tracking-[0.3em] text-white/30">
-              04 / Technical Arsenal
+              <span className="text-[var(--accent)]">04</span> / Technical Arsenal
             </p>
 
             <h2 className="text-5xl font-bold leading-[0.95] tracking-[-0.05em] md:text-7xl">
@@ -104,7 +89,6 @@ function Skills() {
               className="group min-h-[280px] border-b border-r border-white/10 p-8 transition-colors duration-300 hover:bg-white/[0.03] md:p-10"
             >
               <div className="flex h-full flex-col">
-
                 {/* Number */}
                 <span className="text-xs tracking-[0.2em] text-white/25">
                   {group.number}
@@ -126,12 +110,10 @@ function Skills() {
                     </span>
                   ))}
                 </div>
-
               </div>
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );
