@@ -49,7 +49,7 @@ const experiences = [
     company: "ValueLabs",
     location: "Hyderabad, India",
     type: "FULL-TIME",
-    featured: false,
+    featured: true,
     summary:
       "Developed production-grade backend microservices and supported high-availability enterprise systems across the development and production lifecycle.",
     achievements: [
@@ -89,7 +89,7 @@ const experiences = [
     company: "HighRadius Corporation",
     location: "Bhubaneswar, India · Remote",
     type: "INTERNSHIP",
-    featured: false,
+    featured: true,
     summary:
       "Worked across the development lifecycle of an AI-enabled fintech B2B cloud application, gaining hands-on full-stack development experience.",
     achievements: [

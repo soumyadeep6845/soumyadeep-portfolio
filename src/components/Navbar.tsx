@@ -53,6 +53,29 @@ function Navbar() {
     setMenuOpen(false);
   };
 
+  const handleMobileNavigation = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
+    event.preventDefault();
+
+    const targetId = href.replace("#", "");
+    const target = document.getElementById(targetId);
+
+    closeMenu();
+
+    if (!target) {
+      return;
+    }
+
+    requestAnimationFrame(() => {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  };
+
   return (
     <motion.header
       initial={{ opacity: 0, y: -20 }}
@@ -64,7 +87,7 @@ function Navbar() {
     >
       <nav
         className={`relative mx-auto max-w-7xl rounded-2xl border px-3 py-2.5 transition-all duration-500 sm:rounded-full sm:px-4 ${
-          scrolled
+          menuOpen || scrolled
             ? "border-white/10 bg-[#080808]/80 shadow-2xl shadow-black/20 backdrop-blur-xl"
             : "border-transparent bg-transparent"
         }`}
@@ -173,7 +196,9 @@ function Navbar() {
                     <motion.a
                       key={item.href}
                       href={item.href}
-                      onClick={closeMenu}
+                      onClick={(event) =>
+                        handleMobileNavigation(event, item.href)
+                      }
                       initial={{ opacity: 0, x: -8 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{

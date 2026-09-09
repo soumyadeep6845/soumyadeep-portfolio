@@ -21,7 +21,7 @@ function Hero() {
 
         {/* Blue glow */}
         <div
-          className="absolute right-[-30%] top-[35%] h-[350px] w-[350px] -translate-y-1/2 rounded-full opacity-20 blur-[100px] sm:right-[5%] sm:h-[450px] sm:w-[450px] lg:right-[15%] lg:top-1/2 lg:h-[500px] lg:w-[500px] lg:blur-[130px]"
+          className="absolute right-[-30%] top-[35%] h-[350px] w-[350px] -translate-y-1/2 rounded-full opacity-20 blur-[100px] sm:right-[5%] sm:h-[450px] sm:w-[450px] sm:blur-[100px] lg:right-[15%] lg:top-1/2 lg:h-[500px] lg:w-[500px] lg:blur-[130px]"
           style={{ background: "var(--accent)" }}
         />
       </div>
@@ -36,9 +36,9 @@ function Hero() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="mb-6 flex max-w-full items-start gap-3 sm:mb-8 sm:items-center"
+              className="mb-6 flex max-w-full items-center gap-3 sm:mb-8"
             >
-              <span className="relative mt-1.5 flex h-2.5 w-2.5 shrink-0 sm:mt-0">
+              <span className="relative flex h-2.5 w-2.5 shrink-0">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--accent)] opacity-50" />
                 <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[var(--accent)]" />
               </span>
