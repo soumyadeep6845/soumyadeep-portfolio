@@ -1,23 +1,18 @@
-import { motion } from "framer-motion";
-import { portfolio } from "./data/portfolio";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import RecruiterSnapshot from "./components/RecruiterSnapshot";
+import Impact from "./components/Impact";
 
 function App() {
   return (
-    <main className="min-h-screen bg-black text-white flex items-center justify-center">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-center"
-      >
-        <h1 className="text-6xl font-bold tracking-tight">
-          {portfolio.name}
-        </h1>
+    <main className="min-h-screen bg-[#050505] text-white">
+      <Navbar />
 
-        <p className="mt-4 text-xl text-white/60">
-          {portfolio.role}
-        </p>
-      </motion.div>
+      <Hero />
+
+      <RecruiterSnapshot />
+
+      <Impact />
     </main>
   );
 }
