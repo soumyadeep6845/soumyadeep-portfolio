@@ -2,56 +2,109 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
+    number: "01",
     period: "MAY 2024 — NOV 2025",
     role: "Senior Software Engineer",
-    company: "VALUELABS SOLUTIONS LLP",
-    location: "Hyderabad, Telangana, India · Hybrid",
-    description:
-      "Worked on backend and full-stack engineering, focusing on Java-based services, automation, application quality and production-ready software delivery.",
+    company: "ValueLabs",
+    location: "Hyderabad, India",
+    type: "FULL-TIME",
+    featured: true,
+    summary:
+      "Built and optimized backend systems for high-volume enterprise workflows, with a strong focus on reliability, automation and engineering quality.",
     achievements: [
-      "Built Groovy-based data processing pipelines handling 900K+ records.",
-      "Reduced a highly manual workflow from approximately 225 days of effort to around 4 hours.",
-      "Improved unit and integration test coverage from approximately 70% to 84% within 15 days.",
-      "Reduced SonarQube and Snyk vulnerabilities by approximately 40% through a Java 17 upgrade across 6+ repositories.",
-      "Contributed to improving sprint predictability from 81% to 89% through engineering quality and delivery improvements.",
+      {
+        metric: "900K+",
+        label: "records processed",
+        description:
+          "Designed fault-tolerant distributed Groovy pipelines that reduced manual processing effort from 225 days to 4 hours.",
+      },
+      {
+        metric: "84%",
+        label: "test coverage",
+        description:
+          "Increased unit and integration test coverage from approximately 70% to 84% using JUnit and Mockito.",
+      },
+      {
+        metric: "~40%",
+        label: "fewer vulnerabilities",
+        description:
+          "Led Java 17 upgrades across 6+ repositories, reducing SonarQube and Snyk vulnerabilities.",
+      },
     ],
     technologies: [
       "Java",
       "Spring Boot",
       "Groovy",
-      "MySQL",
+      "Gradle",
       "JUnit",
       "Mockito",
-      "SonarQube",
-      "Snyk",
+      "AWS",
+      "Bamboo",
     ],
   },
   {
+    number: "02",
     period: "JAN 2023 — APR 2024",
     role: "Software Engineer",
-    company: "VALUELABS SOLUTIONS LLP",
-    location: "Hyderabad, Telangana, India · Hybrid",
-    description:
-      "Developed and maintained software applications with a focus on backend services, APIs, databases and engineering quality.",
+    company: "ValueLabs",
+    location: "Hyderabad, India",
+    type: "FULL-TIME",
+    featured: false,
+    summary:
+      "Developed production-grade backend microservices and supported high-availability enterprise systems across the development and production lifecycle.",
     achievements: [
-      "Developed backend functionality using Java and Spring Boot.",
-      "Worked with REST APIs and relational databases.",
-      "Contributed to automated testing and code quality practices.",
-      "Collaborated within Agile development and sprint-based delivery.",
+      {
+        metric: "3×",
+        label: "faster PR turnaround",
+        description:
+          "Helped reduce PR turnaround time from approximately 3 days to 1 day through standardized code review practices.",
+      },
+      {
+        metric: "6+",
+        label: "repositories upgraded",
+        description:
+          "Contributed to Java 17 modernization efforts across multiple repositories while improving code security.",
+      },
+      {
+        metric: "SLA",
+        label: "production support",
+        description:
+          "Primary responder for ServiceNow production incidents, helping restore critical services within SLA.",
+      },
     ],
-    technologies: ["Java", "Spring Boot", "REST APIs", "MySQL", "JUnit", "Git"],
+    technologies: [
+      "Java",
+      "Spring Boot",
+      "REST",
+      "JSON",
+      "XML",
+      "Groovy",
+      "Gradle",
+    ],
   },
   {
+    number: "03",
     period: "JAN 2022 — APR 2022",
     role: "Software Developer",
-    company: "HighRadius · Internship",
-    location: "Bhubaneswar, Odisha, India · Remote",
-    description:
-      "Completed the Highway to HighRadius Internship Program, building and deploying an AI-enabled Fintech B2B cloud application as a full-stack web-based product.",
+    company: "HighRadius Corporation",
+    location: "Bhubaneswar, India · Remote",
+    type: "INTERNSHIP",
+    featured: false,
+    summary:
+      "Worked across the development lifecycle of an AI-enabled fintech B2B cloud application, gaining hands-on full-stack development experience.",
     achievements: [
-      "Built and deployed an AI-enabled Fintech B2B cloud application.",
-      "Worked across the full-stack product development lifecycle, including user requirements, user experience and application design.",
-      "Developed data models and machine learning models alongside UI components and backend design.",
+      {
+        metric: "FULL-STACK",
+        label: "product development",
+        description:
+          "Worked across requirements, UX, data models, machine learning models, UI components and backend design.",
+      },
+      {
+        metric: "AI",
+        label: "fintech application",
+        description:
+          "Contributed to an AI-enabled B2B cloud application as part of the Highway to HighRadius Internship Program.",
+      },
     ],
     technologies: [
       "Java",
@@ -72,91 +125,154 @@ function Experience() {
       className="border-t border-white/10 px-6 py-32 lg:px-10"
     >
       <div className="mx-auto max-w-7xl">
-        {/* Header */}
+        {/* Heading */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7 }}
-          className="mb-24"
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-20"
         >
-          <p className="mb-4 text-xs uppercase tracking-[0.3em] text-white/30">
-            <span className="text-[var(--accent)]">03</span> / Experience
+          <p className="text-xs uppercase tracking-[0.3em] text-[var(--accent)]">
+            03 / Experience
           </p>
 
-          <h2 className="max-w-4xl text-5xl font-bold leading-[0.95] tracking-[-0.05em] md:text-7xl">
-            BUILDING
-            <br />
-            <span className="text-white/20">IN PRODUCTION.</span>
-          </h2>
+          <div className="mt-5 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <h2 className="text-5xl font-semibold tracking-[-0.04em] text-white md:text-7xl">
+              Experience<span className="text-white/20">.</span>
+            </h2>
+
+            <p className="max-w-md text-sm leading-relaxed text-white/40">
+              Three years of building, improving and supporting software systems
+              across backend, full-stack and enterprise environments.
+            </p>
+          </div>
         </motion.div>
 
-        {/* Timeline */}
+        {/* Experience list */}
         <div className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-0 top-0 hidden h-full w-px bg-white/10 md:block" />
+          {/* Timeline */}
+          <div className="absolute bottom-0 left-[19px] top-0 hidden w-px bg-white/10 md:block" />
 
-          <div className="space-y-20">
+          <div className="space-y-5">
             {experiences.map((experience, index) => (
               <motion.article
-                key={`${experience.role}-${experience.period}`}
-                initial={{ opacity: 0, y: 40 }}
+                key={`${experience.company}-${experience.period}`}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
+                viewport={{ once: true, margin: "-80px" }}
                 transition={{
-                  duration: 0.7,
-                  delay: index * 0.15,
+                  duration: 0.6,
+                  delay: index * 0.08,
                 }}
                 className="relative md:pl-16"
               >
                 {/* Timeline dot */}
-                <div className="absolute left-[-4px] top-1 hidden h-[9px] w-[9px] rounded-full bg-white md:block" />
+                <div className="absolute left-[13px] top-8 hidden md:block">
+                  <div
+                    className={`h-3 w-3 rounded-full border ${
+                      experience.featured
+                        ? "border-[var(--accent)] bg-[var(--accent)]"
+                        : "border-white/20 bg-[#050505]"
+                    }`}
+                  />
+                </div>
 
-                <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr]">
-                  {/* Left */}
-                  <div>
-                    <p className="text-xs tracking-[0.2em] text-white/30">
-                      {experience.period}
-                    </p>
+                {/* Card */}
+                <div
+                  className={`relative overflow-hidden border ${
+                    experience.featured
+                      ? "border-white/15 bg-white/[0.025]"
+                      : "border-white/10 bg-white/[0.01]"
+                  } transition duration-500 hover:border-white/20`}
+                >
+                  {experience.featured && (
+                    <div
+                      className="absolute left-0 top-0 h-px w-full"
+                      style={{
+                        background:
+                          "linear-gradient(90deg, var(--accent), transparent 60%)",
+                      }}
+                    />
+                  )}
 
-                    <h3 className="mt-4 text-2xl font-semibold tracking-tight">
-                      {experience.role}
-                    </h3>
+                  <div className="p-7 md:p-9 lg:p-10">
+                    {/* Top row */}
+                    <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
+                      <div className="flex gap-5">
+                        <span className="pt-1 font-mono text-xs text-white/20">
+                          {experience.number}
+                        </span>
 
-                    <p className="mt-2 text-sm text-white/50">
-                      {experience.company}
-                    </p>
+                        <div>
+                          <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+                            <h3 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
+                              {experience.role}
+                            </h3>
 
-                    <p className="mt-1 text-sm text-white/30">
-                      {experience.location}
-                    </p>
-                  </div>
+                            <span className="text-white/20">·</span>
 
-                  {/* Right */}
-                  <div>
-                    <p className="max-w-2xl text-lg leading-relaxed text-white/50">
-                      {experience.description}
-                    </p>
+                            <span className="text-sm font-medium text-[var(--accent)]">
+                              {experience.company}
+                            </span>
+                          </div>
 
-                    {/* Achievements */}
-                    <div className="mt-10 space-y-5">
-                      {experience.achievements.map((achievement) => (
-                        <div key={achievement} className="flex gap-4">
-                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-white/30" />
-
-                          <p className="text-sm leading-relaxed text-white/60">
-                            {achievement}
-                          </p>
+                          <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-white/30">
+                            <span>{experience.location}</span>
+                            <span>{experience.type}</span>
+                          </div>
                         </div>
-                      ))}
+                      </div>
+
+                      <span className="shrink-0 font-mono text-[10px] tracking-[0.12em] text-white/25">
+                        {experience.period}
+                      </span>
+                    </div>
+
+                    {/* Summary */}
+                    <p className="mt-8 max-w-3xl text-sm leading-relaxed text-white/45 md:text-base">
+                      {experience.summary}
+                    </p>
+
+                    {/* Metrics */}
+                    <div className="mt-9 grid border-y border-white/10 md:grid-cols-3">
+                      {experience.achievements.map(
+                        (achievement, achievementIndex) => (
+                          <div
+                            key={achievement.label}
+                            className={`py-6 ${
+                              achievementIndex !== 0
+                                ? "border-t border-white/10 md:border-l md:border-t-0"
+                                : ""
+                            } ${
+                              achievementIndex !==
+                              experience.achievements.length - 1
+                                ? "md:pr-7"
+                                : ""
+                            } ${achievementIndex !== 0 ? "md:pl-7" : ""}`}
+                          >
+                            <p className="text-2xl font-semibold tracking-tight text-white">
+                              {achievement.metric}
+                            </p>
+
+                            <p className="mt-1 text-[9px] uppercase tracking-[0.18em] text-[var(--accent)]">
+                              {achievement.label}
+                            </p>
+
+                            <p className="mt-3 text-xs leading-relaxed text-white/35">
+                              {achievement.description}
+                            </p>
+                          </div>
+                        ),
+                      )}
                     </div>
 
                     {/* Technologies */}
-                    <div className="mt-10 flex flex-wrap gap-2">
+                    <div className="mt-7 flex flex-wrap gap-x-5 gap-y-2">
                       {experience.technologies.map((technology) => (
                         <span
                           key={technology}
-                          className="rounded-full bg-white/[0.04] px-3 py-1.5 text-xs text-white/40"
+                          className="text-[10px] uppercase tracking-[0.14em] text-white/25"
                         >
                           {technology}
                         </span>

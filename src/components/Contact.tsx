@@ -1,109 +1,129 @@
 import { motion } from "framer-motion";
+import { portfolio } from "../data/portfolio";
 
 function Contact() {
   return (
     <section
       id="contact"
-      className="border-t border-white/10 px-6 py-32 lg:px-10"
+      className="relative overflow-hidden border-t border-white/10 px-6 pb-10 pt-32 lg:px-10"
     >
-      <div className="mx-auto max-w-7xl">
-        {/* Header */}
+      {/* Background glow */}
+      <div
+        className="pointer-events-none absolute left-1/2 top-1/3 h-[500px] w-[700px] -translate-x-1/2 rounded-full opacity-[0.08] blur-[140px]"
+        style={{ background: "var(--accent)" }}
+      />
+
+      <div className="relative mx-auto max-w-7xl">
+        {/* Main CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="border-b border-white/10 pb-24"
         >
-          <p className="mb-8 text-xs uppercase tracking-[0.3em] text-white/30">
-            <span className="text-[var(--accent)]">07</span> / Get In Touch
+          <p className="text-xs uppercase tracking-[0.3em] text-[var(--accent)]">
+            08 / Contact
           </p>
 
-          <h2 className="max-w-5xl text-[clamp(4rem,10vw,9rem)] font-bold leading-[0.85] tracking-[-0.07em]">
+          <h2 className="mt-6 max-w-5xl text-[clamp(3.5rem,8vw,8rem)] font-semibold leading-[0.9] tracking-[-0.06em] text-white">
             LET'S BUILD
             <br />
-            <span className="text-white/20">SOMETHING</span>
+            SOMETHING
             <br />
-            USEFUL<span className="text-white">.</span>
+            <span className="text-white/20">USEFUL.</span>
           </h2>
-        </motion.div>
 
-        {/* CTA */}
-        <div className="mt-20 grid gap-12 border-t border-white/10 pt-10 md:grid-cols-2">
-          <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-          >
-            <p className="max-w-lg text-lg leading-relaxed text-white/50 md:text-xl">
-              Open to software engineering opportunities, challenging technical
-              problems and teams building products that matter.
+          <div className="mt-12 flex flex-col justify-between gap-8 md:flex-row md:items-end">
+            <p className="max-w-lg text-base leading-relaxed text-white/40">
+              Interested in working together or discussing an engineering
+              opportunity? I'd be happy to connect.
             </p>
-          </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.25 }}
-            className="flex flex-col items-start md:items-end"
-          >
-            <a
-              href="mailto:soumyadeep.dbsslg@gmail.com"
-              className="group inline-flex items-center gap-4 rounded-full bg-white px-7 py-4 text-sm font-medium text-black transition-transform duration-300 hover:scale-105"
-            >
-              Email Me
-              <span className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
-                ↗
-              </span>
-            </a>
-
-            <div className="mt-8 flex gap-6">
+            <div className="flex flex-wrap gap-3">
               <a
-                href="https://www.linkedin.com/in/soumya0021/"
+                href={portfolio.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-white/40 transition-colors hover:text-white"
+                className="rounded-full bg-[var(--accent)] px-7 py-3.5 text-sm font-medium text-white transition duration-300 hover:scale-105 hover:brightness-110"
               >
-                LinkedIn ↗
+                Connect on LinkedIn ↗
               </a>
 
               <a
-                href="https://github.com/soumyadeep6845"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-white/40 transition-colors hover:text-white"
+                href="mailto:soumyadeep.dbsslg@gmail.com"
+                className="rounded-full border border-white/15 px-7 py-3.5 text-sm font-medium text-white/70 transition duration-300 hover:border-white/40 hover:text-white"
               >
-                GitHub ↗
+                Email Me ↗
               </a>
-            </div>
-          </motion.div>
-        </div>
-
-        <motion.a
-          href="#home"
-          whileHover={{ y: -4 }}
-          className="mt-16 inline-flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-white/30 transition-colors hover:text-white"
-        >
-          Back to top
-          <span className="text-[var(--accent)]">↑</span>
-        </motion.a>
-
-        {/* Footer */}
-        <footer className="mt-32 border-t border-white/10 pt-8">
-          <div className="flex flex-col justify-between gap-6 text-xs text-white/25 md:flex-row">
-            <div>
-              <span className="font-medium text-white/50">SOUMYADEEP DAS</span>
-              <span className="mx-2">·</span>
-              Full-Stack Software Engineer
-            </div>
-
-            <div className="flex gap-6">
-              <span>Built with React + TypeScript</span>
-              <span>© 2026</span>
             </div>
           </div>
-        </footer>
+        </motion.div>
+
+        {/* Links / footer */}
+        <div className="grid gap-12 py-10 md:grid-cols-3">
+          {/* Identity */}
+          <div>
+            <p className="text-sm font-semibold text-white">
+              SD<span className="text-[var(--accent)]">.</span>
+            </p>
+
+            <p className="mt-3 max-w-xs text-xs leading-relaxed text-white/25">
+              Java Full-Stack Engineer focused on backend systems, scalable
+              applications and practical engineering.
+            </p>
+          </div>
+
+          {/* Links */}
+          <div className="flex flex-wrap gap-x-8 gap-y-3 md:justify-center">
+            <a
+              href={portfolio.social.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs uppercase tracking-[0.15em] text-white/30 transition-colors hover:text-white"
+            >
+              GitHub ↗
+            </a>
+
+            <a
+              href={portfolio.social.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs uppercase tracking-[0.15em] text-white/30 transition-colors hover:text-white"
+            >
+              LinkedIn ↗
+            </a>
+
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs uppercase tracking-[0.15em] text-white/30 transition-colors hover:text-white"
+            >
+              Resume ↗
+            </a>
+          </div>
+
+          {/* Back to top */}
+          <div className="flex md:justify-end">
+            <a
+              href="#home"
+              className="group flex items-center gap-3 text-xs uppercase tracking-[0.15em] text-white/30 transition-colors hover:text-white"
+            >
+              Back to top
+              <span className="transition-transform duration-300 group-hover:-translate-y-1">
+                ↑
+              </span>
+            </a>
+          </div>
+        </div>
+
+        {/* Bottom line */}
+        <div className="flex flex-col justify-between gap-3 border-t border-white/10 pt-6 text-[10px] uppercase tracking-[0.15em] text-white/20 md:flex-row">
+          <span>© {new Date().getFullYear()} Soumyadeep Das</span>
+
+          <span>Built with React · TypeScript · Tailwind</span>
+        </div>
       </div>
     </section>
   );

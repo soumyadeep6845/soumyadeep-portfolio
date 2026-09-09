@@ -16,7 +16,7 @@ function About() {
           className="mb-20"
         >
           <p className="mb-4 text-xs uppercase tracking-[0.3em] text-white/30">
-            <span className="text-[var(--accent)]">06</span> / About
+            <span className="text-[var(--accent)]">07</span> / About
           </p>
 
           <h2 className="max-w-4xl text-5xl font-bold leading-[0.95] tracking-[-0.05em] md:text-7xl">
