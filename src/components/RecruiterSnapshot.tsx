@@ -21,7 +21,7 @@ function RecruiterSnapshot() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-[10px] uppercase tracking-[0.28em] text-white/30 sm:text-xs sm:tracking-[0.3em]">
+            <p className="text-[10px] uppercase tracking-[0.28em] text-white/50 sm:text-xs sm:tracking-[0.3em]">
               Recruiter Snapshot
             </p>
           </motion.div>
@@ -35,7 +35,7 @@ function RecruiterSnapshot() {
           >
             <h2 className="max-w-3xl text-[1.55rem] font-medium leading-[1.4] tracking-tight sm:text-3xl sm:leading-relaxed md:text-4xl">
               Full-Stack Software Engineer with a{" "}
-              <span className="text-white/40">strong backend focus</span>,
+              <span className="text-white/55">strong backend focus</span>,
               experienced in building APIs, backend services, data-driven
               workflows and production-ready applications.
             </h2>
@@ -51,7 +51,7 @@ function RecruiterSnapshot() {
                     duration: 0.4,
                     delay: index * 0.06,
                   }}
-                  className="rounded-full border border-white/10 px-3.5 py-1.5 text-[11px] text-white/50 transition-colors hover:border-white/30 hover:text-white sm:px-5 sm:py-2.5 sm:text-sm"
+                  className="rounded-full border border-white/10 px-3.5 py-1.5 text-[11px] text-white/65 transition-colors hover:border-white/30 hover:text-white sm:px-5 sm:py-2.5 sm:text-sm"
                 >
                   {strength}
                 </motion.span>

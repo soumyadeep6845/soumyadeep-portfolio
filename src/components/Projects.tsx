@@ -80,16 +80,16 @@ function ArchitectureFlow() {
     <div className="mt-8 border border-white/10 bg-white/[0.015] p-4 sm:mt-12 sm:p-6 md:p-8">
       <div className="mb-5 flex items-start justify-between gap-4 sm:mb-7 sm:items-center">
         <div>
-          <p className="text-[9px] uppercase tracking-[0.2em] text-white/30 sm:text-[10px] sm:tracking-[0.25em]">
+          <p className="text-[9px] uppercase tracking-[0.2em] text-white/50 sm:text-[10px] sm:tracking-[0.25em]">
             Request Architecture
           </p>
 
-          <p className="mt-1.5 text-xs text-white/50 sm:mt-2 sm:text-sm">
+          <p className="mt-1.5 text-xs text-white/60 sm:mt-2 sm:text-sm">
             From source code to automated review
           </p>
         </div>
 
-        <div className="hidden text-[10px] uppercase tracking-[0.2em] text-white/20 sm:block">
+        <div className="hidden text-[10px] uppercase tracking-[0.2em] text-white/40 sm:block">
           SYSTEM FLOW
         </div>
       </div>
@@ -108,7 +108,7 @@ function ArchitectureFlow() {
               className="group relative flex-1 border border-white/10 bg-[#080808] p-3.5 transition duration-300 hover:border-white/25 sm:p-5"
             >
               <div className="flex items-center justify-between">
-                <span className="text-[8px] uppercase tracking-[0.18em] text-white/25 sm:text-[9px] sm:tracking-[0.2em]">
+                <span className="text-[8px] uppercase tracking-[0.18em] text-white/45 sm:text-[9px] sm:tracking-[0.2em]">
                   {node.label}
                 </span>
 
@@ -119,7 +119,7 @@ function ArchitectureFlow() {
                 {node.title}
               </p>
 
-              <p className="mt-1 text-[11px] text-white/30 sm:text-xs">
+              <p className="mt-1 text-[11px] text-white/50 sm:text-xs">
                 {node.detail}
               </p>
 
@@ -127,11 +127,11 @@ function ArchitectureFlow() {
             </motion.div>
 
             {index < nodes.length - 1 && (
-              <div className="hidden px-2 text-white/20 md:block">→</div>
+              <div className="hidden px-2 text-white/40 md:block">→</div>
             )}
 
             {index < nodes.length - 1 && (
-              <div className="py-0.5 text-center text-xs text-white/20 md:hidden">
+              <div className="py-0.5 text-center text-xs text-white/40 md:hidden">
                 ↓
               </div>
             )}
@@ -145,9 +145,9 @@ function ArchitectureFlow() {
           <div className="flex items-center gap-3">
             <span className="h-1.5 w-1.5 rounded-full bg-white/30" />
 
-            <span className="text-xs font-medium text-white/60">Redis</span>
+            <span className="text-xs font-medium text-white/70">Redis</span>
 
-            <span className="ml-auto text-[8px] uppercase tracking-wider text-white/20 sm:text-[9px]">
+            <span className="ml-auto text-[8px] uppercase tracking-wider text-white/40 sm:text-[9px]">
               Cache
             </span>
           </div>
@@ -157,9 +157,9 @@ function ArchitectureFlow() {
           <div className="flex items-center gap-3">
             <span className="h-1.5 w-1.5 rounded-full bg-white/30" />
 
-            <span className="text-xs font-medium text-white/60">MySQL</span>
+            <span className="text-xs font-medium text-white/70">MySQL</span>
 
-            <span className="ml-auto text-[8px] uppercase tracking-wider text-white/20 sm:text-[9px]">
+            <span className="ml-auto text-[8px] uppercase tracking-wider text-white/40 sm:text-[9px]">
               Persistence
             </span>
           </div>
@@ -190,11 +190,11 @@ function Projects() {
             </p>
 
             <h2 className="mt-4 text-[2.8rem] font-semibold leading-[0.95] tracking-[-0.055em] text-white sm:mt-5 sm:text-5xl md:text-7xl">
-              Projects<span className="text-white/20">.</span>
+              Projects<span className="text-white/30">.</span>
             </h2>
           </div>
 
-          <p className="max-w-md text-xs leading-relaxed text-white/40 sm:text-sm">
+          <p className="max-w-md text-xs leading-relaxed text-white/60 sm:text-sm">
             A selection of systems and applications built around backend
             engineering, APIs, AI and full-stack development.
           </p>
@@ -232,7 +232,7 @@ function Projects() {
 
                       <span className="h-px w-6 bg-white/15 sm:w-8" />
 
-                      <span className="text-[8px] uppercase tracking-[0.16em] text-white/30 sm:text-[10px] sm:tracking-[0.2em]">
+                      <span className="text-[8px] uppercase tracking-[0.16em] text-white/50 sm:text-[10px] sm:tracking-[0.2em]">
                         {project.category}
                       </span>
                     </div>
@@ -249,7 +249,7 @@ function Projects() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex min-h-11 w-full items-center justify-center rounded-full border border-white/15 px-5 py-2.5 text-xs font-medium text-white/60 transition duration-300 hover:border-white/40 hover:text-white sm:w-auto"
+                      className="inline-flex min-h-11 w-full items-center justify-center rounded-full border border-white/15 px-5 py-2.5 text-xs font-medium text-white/70 transition duration-300 hover:border-white/40 hover:text-white sm:w-auto"
                     >
                       GitHub ↗
                     </a>
@@ -270,16 +270,16 @@ function Projects() {
                 {/* Description */}
                 <div className="mt-7 grid gap-7 sm:mt-10 sm:gap-10 lg:grid-cols-[1.1fr_0.9fr]">
                   <div>
-                    <p className="max-w-2xl text-sm leading-relaxed text-white/55 sm:text-lg">
+                    <p className="max-w-2xl text-sm leading-relaxed text-white/60 sm:text-lg">
                       {project.description}
                     </p>
 
                     <div className="mt-6 sm:mt-8">
-                      <p className="text-[9px] uppercase tracking-[0.18em] text-white/25 sm:text-[10px] sm:tracking-[0.2em]">
+                      <p className="text-[9px] uppercase tracking-[0.18em] text-white/45 sm:text-[10px] sm:tracking-[0.2em]">
                         Engineering Focus
                       </p>
 
-                      <p className="mt-2.5 max-w-2xl text-xs leading-relaxed text-white/40 sm:mt-3 sm:text-sm">
+                      <p className="mt-2.5 max-w-2xl text-xs leading-relaxed text-white/60 sm:mt-3 sm:text-sm">
                         {project.problem}
                       </p>
                     </div>
@@ -287,7 +287,7 @@ function Projects() {
 
                   {/* Highlights */}
                   <div>
-                    <p className="text-[9px] uppercase tracking-[0.18em] text-white/25 sm:text-[10px] sm:tracking-[0.2em]">
+                    <p className="text-[9px] uppercase tracking-[0.18em] text-white/45 sm:text-[10px] sm:tracking-[0.2em]">
                       Key Capabilities
                     </p>
 
@@ -295,7 +295,7 @@ function Projects() {
                       {project.highlights.map((highlight) => (
                         <div
                           key={highlight}
-                          className="flex items-start gap-3 text-xs leading-relaxed text-white/55 sm:text-sm"
+                          className="flex items-start gap-3 text-xs leading-relaxed text-white/60 sm:text-sm"
                         >
                           <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-[var(--accent)] sm:mt-2" />
 
@@ -315,7 +315,7 @@ function Projects() {
                     {project.stack.map((technology) => (
                       <span
                         key={technology}
-                        className="border border-white/10 px-2.5 py-1.5 text-[9px] uppercase tracking-[0.08em] text-white/35 transition-colors hover:border-white/25 hover:text-white/60 sm:px-3 sm:text-[10px] sm:tracking-wider"
+                        className="border border-white/10 px-2.5 py-1.5 text-[9px] uppercase tracking-[0.08em] text-white/50 transition-colors hover:border-white/25 hover:text-white/60 sm:px-3 sm:text-[10px] sm:tracking-wider"
                       >
                         {technology}
                       </span>
@@ -346,13 +346,13 @@ function Projects() {
                   {/* Header */}
                   <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between md:gap-6">
                     <div className="flex gap-4 sm:gap-5">
-                      <span className="pt-1 font-mono text-[10px] text-white/20 sm:text-xs">
+                      <span className="pt-1 font-mono text-[10px] text-white/40 sm:text-xs">
                         {project.number}
                       </span>
 
                       <div>
                         <div className="flex flex-wrap items-center gap-3">
-                          <span className="text-[9px] uppercase tracking-[0.16em] text-white/25 sm:text-[10px] sm:tracking-[0.2em]">
+                          <span className="text-[9px] uppercase tracking-[0.16em] text-white/45 sm:text-[10px] sm:tracking-[0.2em]">
                             {project.category}
                           </span>
                         </div>
@@ -368,7 +368,7 @@ function Projects() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="self-start text-[10px] uppercase tracking-[0.14em] text-white/30 transition-colors hover:text-white sm:text-xs sm:tracking-[0.15em]"
+                      className="self-start text-[10px] uppercase tracking-[0.14em] text-white/50 transition-colors hover:text-white sm:text-xs sm:tracking-[0.15em]"
                     >
                       GitHub ↗
                     </a>
@@ -376,7 +376,7 @@ function Projects() {
 
                   {/* Description */}
                   <div className="mt-6 max-w-3xl sm:mt-9">
-                    <p className="text-sm leading-relaxed text-white/50 sm:text-base md:text-lg">
+                    <p className="text-sm leading-relaxed text-white/60 sm:text-base md:text-lg">
                       {project.description}
                     </p>
                   </div>
@@ -385,11 +385,11 @@ function Projects() {
                   <div className="mt-7 grid gap-7 border-t border-white/10 pt-6 sm:mt-10 sm:gap-10 sm:pt-8 md:grid-cols-2">
                     {/* Engineering focus */}
                     <div>
-                      <p className="text-[9px] uppercase tracking-[0.18em] text-white/25 sm:text-[10px] sm:tracking-[0.2em]">
+                      <p className="text-[9px] uppercase tracking-[0.18em] text-white/45 sm:text-[10px] sm:tracking-[0.2em]">
                         Engineering Focus
                       </p>
 
-                      <p className="mt-2.5 max-w-xl text-xs leading-relaxed text-white/35 sm:mt-3 sm:text-sm">
+                      <p className="mt-2.5 max-w-xl text-xs leading-relaxed text-white/50 sm:mt-3 sm:text-sm">
                         Built as a full-stack application with a Spring Boot
                         backend, React frontend and MySQL persistence, with
                         integration to the YouTube API for playlist-related
@@ -399,7 +399,7 @@ function Projects() {
 
                     {/* Capabilities */}
                     <div>
-                      <p className="text-[9px] uppercase tracking-[0.18em] text-white/25 sm:text-[10px] sm:tracking-[0.2em]">
+                      <p className="text-[9px] uppercase tracking-[0.18em] text-white/45 sm:text-[10px] sm:tracking-[0.2em]">
                         Key Capabilities
                       </p>
 
@@ -407,7 +407,7 @@ function Projects() {
                         {project.highlights.map((highlight) => (
                           <div
                             key={highlight}
-                            className="flex items-start gap-3 text-xs leading-relaxed text-white/45 sm:text-sm"
+                            className="flex items-start gap-3 text-xs leading-relaxed text-white/60 sm:text-sm"
                           >
                             <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-[var(--accent)] sm:mt-2" />
 
@@ -420,7 +420,7 @@ function Projects() {
 
                   {/* Stack */}
                   <div className="mt-7 border-t border-white/10 pt-6 sm:mt-10 sm:pt-7">
-                    <p className="mb-3 text-[9px] uppercase tracking-[0.18em] text-white/25 sm:mb-4 sm:text-[10px] sm:tracking-[0.2em]">
+                    <p className="mb-3 text-[9px] uppercase tracking-[0.18em] text-white/45 sm:mb-4 sm:text-[10px] sm:tracking-[0.2em]">
                       Stack
                     </p>
 
@@ -428,7 +428,7 @@ function Projects() {
                       {project.stack.map((technology) => (
                         <span
                           key={technology}
-                          className="border border-white/10 px-2.5 py-1.5 text-[9px] uppercase tracking-[0.08em] text-white/35 transition-colors hover:border-white/25 hover:text-white/60 sm:px-3 sm:text-[10px] sm:tracking-wider"
+                          className="border border-white/10 px-2.5 py-1.5 text-[9px] uppercase tracking-[0.08em] text-white/50 transition-colors hover:border-white/25 hover:text-white/60 sm:px-3 sm:text-[10px] sm:tracking-wider"
                         >
                           {technology}
                         </span>

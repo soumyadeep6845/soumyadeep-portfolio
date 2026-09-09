@@ -139,10 +139,10 @@ function Experience() {
 
           <div className="mt-4 flex flex-col justify-between gap-4 sm:mt-5 sm:gap-6 md:flex-row md:items-end">
             <h2 className="text-[2.8rem] font-semibold leading-[0.95] tracking-[-0.055em] text-white sm:text-5xl md:text-7xl">
-              Experience<span className="text-white/20">.</span>
+              Experience<span className="text-white/30">.</span>
             </h2>
 
-            <p className="max-w-md text-xs leading-relaxed text-white/40 sm:text-sm">
+            <p className="max-w-md text-xs leading-relaxed text-white/60 sm:text-sm">
               Three years of building, improving and supporting software systems
               across backend, full-stack and enterprise environments.
             </p>
@@ -200,7 +200,7 @@ function Experience() {
                     {/* Top row */}
                     <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between lg:gap-6">
                       <div className="flex gap-4 sm:gap-5">
-                        <span className="pt-1 font-mono text-[10px] text-white/20 sm:text-xs">
+                        <span className="pt-1 font-mono text-[10px] text-white/40 sm:text-xs">
                           {experience.number}
                         </span>
 
@@ -210,7 +210,7 @@ function Experience() {
                               {experience.role}
                             </h3>
 
-                            <span className="hidden text-white/20 sm:inline">
+                            <span className="hidden text-white/30 sm:inline">
                               ·
                             </span>
 
@@ -219,20 +219,20 @@ function Experience() {
                             </span>
                           </div>
 
-                          <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-[10px] text-white/30 sm:gap-x-4 sm:text-xs">
+                          <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-[10px] text-white/50 sm:gap-x-4 sm:text-xs">
                             <span>{experience.location}</span>
                             <span>{experience.type}</span>
                           </div>
                         </div>
                       </div>
 
-                      <span className="shrink-0 pl-8 font-mono text-[9px] tracking-[0.1em] text-white/25 sm:text-[10px] sm:tracking-[0.12em] lg:pl-0">
+                      <span className="shrink-0 pl-8 font-mono text-[9px] tracking-[0.1em] text-white/45 sm:text-[10px] sm:tracking-[0.12em] lg:pl-0">
                         {experience.period}
                       </span>
                     </div>
 
                     {/* Summary */}
-                    <p className="mt-5 max-w-3xl text-xs leading-relaxed text-white/45 sm:mt-8 sm:text-sm md:text-base">
+                    <p className="mt-5 max-w-3xl text-xs leading-relaxed text-white/60 sm:mt-8 sm:text-sm md:text-base">
                       {experience.summary}
                     </p>
 
@@ -261,7 +261,7 @@ function Experience() {
                               {achievement.label}
                             </p>
 
-                            <p className="mt-2.5 text-[11px] leading-relaxed text-white/35 sm:mt-3 sm:text-xs">
+                            <p className="mt-2.5 text-[11px] leading-relaxed text-white/50 sm:mt-3 sm:text-xs">
                               {achievement.description}
                             </p>
                           </div>
@@ -274,7 +274,7 @@ function Experience() {
                       {experience.technologies.map((technology) => (
                         <span
                           key={technology}
-                          className="text-[9px] uppercase tracking-[0.12em] text-white/25 sm:text-[10px] sm:tracking-[0.14em]"
+                          className="text-[9px] uppercase tracking-[0.12em] text-white/45 sm:text-[10px] sm:tracking-[0.14em]"
                         >
                           {technology}
                         </span>

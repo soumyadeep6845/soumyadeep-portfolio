@@ -101,12 +101,12 @@ function Navbar() {
             className="group flex items-center gap-2.5"
             aria-label="Back to home"
           >
-            <span className="relative flex h-7 w-7 items-center justify-center rounded-full border border-white/15 text-[9px] font-semibold tracking-tight text-white/70 transition duration-300 group-hover:border-[var(--accent)] group-hover:text-white">
+            <span className="relative flex h-7 w-7 items-center justify-center rounded-full border border-white/20 text-[9px] font-semibold tracking-tight text-white/80 transition duration-300 group-hover:border-[var(--accent)] group-hover:text-white">
               SD
               <span className="absolute -right-0.5 -top-0.5 h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
             </span>
 
-            <span className="hidden text-xs font-medium tracking-wide text-white/50 transition-colors group-hover:text-white sm:block">
+            <span className="hidden text-xs font-medium tracking-wide text-white/65 transition-colors group-hover:text-white sm:block">
               Soumyadeep Das
             </span>
           </a>
@@ -117,7 +117,7 @@ function Navbar() {
               <a
                 key={item.href}
                 href={item.href}
-                className="group relative rounded-full px-3.5 py-2 text-[11px] uppercase tracking-[0.12em] text-white/35 transition-colors duration-300 hover:text-white"
+                className="group relative rounded-full px-3.5 py-2 text-[11px] uppercase tracking-[0.12em] text-white/60 transition-colors duration-300 hover:text-white"
               >
                 {item.label}
 
@@ -131,7 +131,7 @@ function Navbar() {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="group hidden items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-[10px] font-medium uppercase tracking-[0.12em] text-white/60 transition duration-300 hover:border-[var(--accent)] hover:text-white md:flex"
+            className="group hidden items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-[10px] font-medium uppercase tracking-[0.12em] text-white/75 transition duration-300 hover:border-[var(--accent)] hover:text-white md:flex"
           >
             Resume
             <span className="transition-transform duration-300 group-hover:-translate-y-0.5">
@@ -143,7 +143,7 @@ function Navbar() {
           <button
             type="button"
             onClick={() => setMenuOpen((open) => !open)}
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/60 transition duration-300 hover:border-white/25 hover:text-white md:hidden"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white/75 transition duration-300 hover:border-white/30 hover:text-white md:hidden"
             aria-label={
               menuOpen ? "Close navigation menu" : "Open navigation menu"
             }
@@ -205,11 +205,11 @@ function Navbar() {
                         duration: 0.25,
                         delay: 0.05 + index * 0.04,
                       }}
-                      className="group flex items-center justify-between border-b border-white/5 px-3 py-3.5 text-xs font-medium uppercase tracking-[0.14em] text-white/50 transition-colors duration-300 hover:text-white"
+                      className="group flex items-center justify-between border-b border-white/10 px-3 py-3.5 text-xs font-medium uppercase tracking-[0.14em] text-white/70 transition-colors duration-300 hover:text-white"
                     >
                       <span>{item.label}</span>
 
-                      <span className="text-white/20 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[var(--accent)]">
+                      <span className="text-white/40 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[var(--accent)]">
                         →
                       </span>
                     </motion.a>
@@ -225,7 +225,7 @@ function Navbar() {
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.25, delay: 0.25 }}
-                  className="mt-4 flex items-center justify-center gap-2 rounded-full border border-white/15 px-4 py-3 text-[10px] font-medium uppercase tracking-[0.14em] text-white/70 transition duration-300 hover:border-[var(--accent)] hover:text-white"
+                  className="mt-4 flex items-center justify-center gap-2 rounded-full border border-white/20 px-4 py-3 text-[10px] font-medium uppercase tracking-[0.14em] text-white/80 transition duration-300 hover:border-[var(--accent)] hover:text-white"
                 >
                   Resume
                   <span>↗</span>

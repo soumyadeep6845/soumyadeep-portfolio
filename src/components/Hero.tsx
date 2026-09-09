@@ -43,7 +43,7 @@ function Hero() {
                 <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[var(--accent)]" />
               </span>
 
-              <span className="max-w-[280px] text-[10px] leading-relaxed tracking-[0.07em] text-white/50 sm:max-w-none sm:text-sm sm:tracking-wide">
+              <span className="max-w-[280px] text-[10px] leading-relaxed tracking-[0.07em] text-white/65 sm:max-w-none sm:text-sm sm:tracking-wide">
                 SOFTWARE ENGINEER · OPEN TO OPPORTUNITIES
               </span>
             </motion.div>
@@ -63,7 +63,7 @@ function Hero() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="whitespace-nowrap text-[clamp(2.65rem,12vw,4.5rem)] font-extrabold leading-[0.84] tracking-[-0.075em] text-white/20 sm:text-[clamp(4rem,11vw,8.5rem)] lg:text-[clamp(4rem,8vw,8.5rem)]"
+                className="whitespace-nowrap text-[clamp(2.65rem,12vw,4.5rem)] font-extrabold leading-[0.84] tracking-[-0.075em] text-white/30 sm:text-[clamp(4rem,11vw,8.5rem)] lg:text-[clamp(4rem,8vw,8.5rem)]"
               >
                 DAS<span className="text-[var(--accent)]">.</span>
               </motion.h1>
@@ -88,7 +88,7 @@ function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.45 }}
-              className="mt-4 max-w-xl text-sm leading-relaxed text-white/45 sm:mt-6 sm:text-lg"
+              className="mt-4 max-w-xl text-sm leading-relaxed text-white/60 sm:mt-6 sm:text-lg"
             >
               Backend-focused software engineer with experience building
               scalable microservices, React applications and AI-powered
@@ -128,7 +128,7 @@ function Hero() {
                 href={portfolio.social.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs uppercase tracking-[0.15em] text-white/30 transition-colors hover:text-white"
+                className="text-xs uppercase tracking-[0.15em] text-white/50 transition-colors hover:text-white"
               >
                 GitHub ↗
               </a>
@@ -137,7 +137,7 @@ function Hero() {
                 href={portfolio.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs uppercase tracking-[0.15em] text-white/30 transition-colors hover:text-white"
+                className="text-xs uppercase tracking-[0.15em] text-white/50 transition-colors hover:text-white"
               >
                 LinkedIn ↗
               </a>
@@ -185,7 +185,7 @@ function Hero() {
               transition={{ duration: 0.6, delay: 1 }}
               className="absolute -bottom-4 left-2 border border-white/10 bg-[#080808]/90 px-4 py-2.5 backdrop-blur-md sm:-bottom-5 sm:-left-5 sm:px-5 sm:py-3"
             >
-              <p className="text-[9px] uppercase tracking-[0.2em] text-white/30 sm:text-[10px]">
+              <p className="text-[9px] uppercase tracking-[0.2em] text-white/50 sm:text-[10px]">
                 Based in
               </p>
 
@@ -198,7 +198,7 @@ function Hero() {
             <div className="absolute -right-18 top-6 hidden border border-white/10 bg-[#080808]/90 px-4 py-3 backdrop-blur-md xl:block">
               <p className="text-xs font-medium text-white/70">3+ YEARS</p>
 
-              <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-white/30">
+              <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-white/50">
                 Software Engineering
               </p>
             </div>
@@ -214,14 +214,14 @@ function Hero() {
         className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 md:block"
       >
         <div className="flex flex-col items-center gap-2">
-          <span className="text-[10px] uppercase tracking-[0.3em] text-white/30">
+          <span className="text-[10px] uppercase tracking-[0.3em] text-white/50">
             Scroll
           </span>
 
           <motion.div
             animate={{ y: [0, 6, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
-            className="text-white/40"
+            className="text-white/50"
           >
             ↓
           </motion.div>

@@ -118,11 +118,11 @@ function Skills() {
             </p>
 
             <h2 className="mt-4 text-[2.8rem] font-semibold leading-[0.95] tracking-[-0.055em] text-white sm:mt-5 sm:text-5xl md:text-7xl">
-              Skills<span className="text-white/20">.</span>
+              Skills<span className="text-white/30">.</span>
             </h2>
           </div>
 
-          <p className="max-w-md text-xs leading-relaxed text-white/40 sm:text-sm">
+          <p className="max-w-md text-xs leading-relaxed text-white/60 sm:text-sm">
             Technologies are tools. The real focus is building reliable backend
             systems, useful products and maintainable software.
           </p>
@@ -157,7 +157,7 @@ function Skills() {
                 {/* Heading */}
                 <div>
                   <div className="flex items-center gap-3 sm:gap-4">
-                    <span className="font-mono text-[9px] text-white/20 sm:text-[10px]">
+                    <span className="font-mono text-[9px] text-white/40 sm:text-[10px]">
                       {group.number}
                     </span>
 
@@ -169,7 +169,7 @@ function Skills() {
                     <span className="text-[var(--accent)]">.</span>
                   </h3>
 
-                  <p className="mt-2.5 max-w-lg text-xs leading-relaxed text-white/35 sm:mt-3 sm:text-sm">
+                  <p className="mt-2.5 max-w-lg text-xs leading-relaxed text-white/50 sm:mt-3 sm:text-sm">
                     {group.description}
                   </p>
                 </div>
@@ -179,7 +179,7 @@ function Skills() {
                   {group.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="border border-white/10 px-2.5 py-1.5 text-[9px] uppercase tracking-[0.09em] text-white/40 transition duration-300 hover:border-white/25 hover:text-white/80 sm:px-3 sm:py-2 sm:text-[10px] sm:tracking-[0.12em]"
+                      className="border border-white/10 px-2.5 py-1.5 text-[9px] uppercase tracking-[0.09em] text-white/60 transition duration-300 hover:border-white/25 hover:text-white/80 sm:px-3 sm:py-2 sm:text-[10px] sm:tracking-[0.12em]"
                     >
                       {skill}
                     </span>
@@ -200,7 +200,7 @@ function Skills() {
         >
           <span className="mt-2 h-px w-8 shrink-0 bg-[var(--accent)] sm:mt-0 sm:w-12" />
 
-          <p className="text-[9px] uppercase leading-relaxed tracking-[0.16em] text-white/25 sm:text-xs sm:tracking-[0.2em]">
+          <p className="text-[9px] uppercase leading-relaxed tracking-[0.16em] text-white/45 sm:text-xs sm:tracking-[0.2em]">
             Backend first · Full-stack capable · Product minded
           </p>
         </motion.div>

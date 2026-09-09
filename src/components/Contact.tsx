@@ -31,11 +31,11 @@ function Contact() {
             <br />
             SOMETHING
             <br />
-            <span className="text-white/20">USEFUL.</span>
+            <span className="text-white/30">USEFUL.</span>
           </h2>
 
           <div className="mt-9 flex flex-col justify-between gap-7 sm:mt-12 sm:gap-8 md:flex-row md:items-end">
-            <p className="max-w-lg text-sm leading-relaxed text-white/40 sm:text-base">
+            <p className="max-w-lg text-sm leading-relaxed text-white/60 sm:text-base">
               Interested in working together or discussing an engineering
               opportunity? I'd be happy to connect.
             </p>
@@ -68,7 +68,7 @@ function Contact() {
               SD<span className="text-[var(--accent)]">.</span>
             </p>
 
-            <p className="mt-3 max-w-xs text-xs leading-relaxed text-white/25">
+            <p className="mt-3 max-w-xs text-xs leading-relaxed text-white/50">
               Java Full-Stack Engineer focused on backend systems, scalable
               applications and practical engineering.
             </p>
@@ -80,7 +80,7 @@ function Contact() {
               href={portfolio.social.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[10px] uppercase tracking-[0.15em] text-white/30 transition-colors hover:text-white sm:text-xs"
+              className="text-[10px] uppercase tracking-[0.15em] text-white/50 transition-colors hover:text-white sm:text-xs"
             >
               GitHub ↗
             </a>
@@ -89,7 +89,7 @@ function Contact() {
               href={portfolio.social.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[10px] uppercase tracking-[0.15em] text-white/30 transition-colors hover:text-white sm:text-xs"
+              className="text-[10px] uppercase tracking-[0.15em] text-white/50 transition-colors hover:text-white sm:text-xs"
             >
               LinkedIn ↗
             </a>
@@ -98,7 +98,7 @@ function Contact() {
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[10px] uppercase tracking-[0.15em] text-white/30 transition-colors hover:text-white sm:text-xs"
+              className="text-[10px] uppercase tracking-[0.15em] text-white/50 transition-colors hover:text-white sm:text-xs"
             >
               Resume ↗
             </a>
@@ -108,7 +108,7 @@ function Contact() {
           <div className="flex md:justify-end">
             <a
               href="#home"
-              className="group flex items-center gap-3 text-[10px] uppercase tracking-[0.15em] text-white/30 transition-colors hover:text-white sm:text-xs"
+              className="group flex items-center gap-3 text-[10px] uppercase tracking-[0.15em] text-white/50 transition-colors hover:text-white sm:text-xs"
             >
               Back to top
               <span className="transition-transform duration-300 group-hover:-translate-y-1">
@@ -119,7 +119,7 @@ function Contact() {
         </div>
 
         {/* Bottom line */}
-        <div className="flex flex-col justify-between gap-3 border-t border-white/10 pt-5 text-[9px] uppercase tracking-[0.13em] text-white/20 sm:pt-6 sm:text-[10px] sm:tracking-[0.15em] md:flex-row">
+        <div className="flex flex-col justify-between gap-3 border-t border-white/10 pt-5 text-[9px] uppercase tracking-[0.13em] text-white/40 sm:pt-6 sm:text-[10px] sm:tracking-[0.15em] md:flex-row">
           <span>© {new Date().getFullYear()} Soumyadeep Das</span>
 
           <span>Built with React · TypeScript · Tailwind</span>

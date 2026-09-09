@@ -112,11 +112,11 @@ function Impact() {
 
             <h2 className="mt-4 text-[2.6rem] font-semibold leading-[0.95] tracking-[-0.055em] text-white sm:mt-5 sm:text-5xl md:text-7xl">
               Numbers that matter
-              <span className="text-white/20">.</span>
+              <span className="text-white/30">.</span>
             </h2>
           </div>
 
-          <p className="max-w-md text-xs leading-relaxed text-white/40 sm:text-sm">
+          <p className="max-w-md text-xs leading-relaxed text-white/60 sm:text-sm">
             Engineering work measured through performance, quality, automation
             and operational impact.
           </p>
@@ -139,7 +139,7 @@ function Impact() {
               {/* Hover accent */}
               <div className="absolute left-0 top-0 h-px w-0 bg-[var(--accent)] transition-all duration-500 group-hover:w-full" />
 
-              <span className="font-mono text-[10px] text-white/20">
+              <span className="font-mono text-[10px] text-white/40">
                 0{index + 1}
               </span>
 
@@ -156,7 +156,7 @@ function Impact() {
                   {metric.label}
                 </p>
 
-                <p className="mt-3 text-xs leading-relaxed text-white/30 sm:mt-4">
+                <p className="mt-3 text-xs leading-relaxed text-white/50 sm:mt-4">
                   {metric.description}
                 </p>
               </div>
