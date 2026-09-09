@@ -41,9 +41,11 @@ function AnimatedNumber({
   prefix?: string;
 }) {
   const ref = useRef<HTMLSpanElement>(null);
+
   const isInView = useInView(ref, {
     once: true,
-    margin: "-100px",
+    amount: 0.1,
+    margin: "0px",
   });
 
   const [count, setCount] = useState(0);
@@ -53,6 +55,7 @@ function AnimatedNumber({
 
     const duration = 1200;
     const startTime = performance.now();
+    let animationFrame: number;
 
     const animate = (currentTime: number) => {
       const elapsed = currentTime - startTime;
@@ -64,11 +67,18 @@ function AnimatedNumber({
       setCount(Math.round(value * eased));
 
       if (progress < 1) {
-        requestAnimationFrame(animate);
+        animationFrame = requestAnimationFrame(animate);
+      } else {
+        // Always guarantee the exact final value.
+        setCount(value);
       }
     };
 
-    requestAnimationFrame(animate);
+    animationFrame = requestAnimationFrame(animate);
+
+    return () => {
+      cancelAnimationFrame(animationFrame);
+    };
   }, [isInView, value]);
 
   return (
@@ -93,23 +103,23 @@ function Impact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-9 sm:mb-14 lg:mb-16"
+          className="mb-9 flex flex-col justify-between gap-4 sm:mb-14 sm:gap-6 lg:mb-16 md:flex-row md:items-end"
         >
-          <p className="text-[10px] uppercase tracking-[0.28em] text-[var(--accent)] sm:text-xs sm:tracking-[0.3em]">
-            01 / Impact
-          </p>
+          <div>
+            <p className="text-[10px] uppercase tracking-[0.28em] text-[var(--accent)] sm:text-xs sm:tracking-[0.3em]">
+              01 / Impact
+            </p>
 
-          <div className="mt-4 flex flex-col justify-between gap-4 sm:mt-5 sm:gap-6 md:flex-row md:items-end">
-            <h2 className="text-[2.6rem] font-semibold leading-[0.95] tracking-[-0.055em] text-white sm:text-5xl md:text-7xl">
+            <h2 className="mt-4 text-[2.6rem] font-semibold leading-[0.95] tracking-[-0.055em] text-white sm:mt-5 sm:text-5xl md:text-7xl">
               Numbers that matter
               <span className="text-white/20">.</span>
             </h2>
-
-            <p className="max-w-md text-xs leading-relaxed text-white/40 sm:text-sm">
-              Engineering work measured through performance, quality, automation
-              and operational impact.
-            </p>
           </div>
+
+          <p className="max-w-md text-xs leading-relaxed text-white/40 sm:text-sm">
+            Engineering work measured through performance, quality, automation
+            and operational impact.
+          </p>
         </motion.div>
 
         {/* Metrics */}
