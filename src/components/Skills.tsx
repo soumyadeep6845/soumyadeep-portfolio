@@ -101,7 +101,7 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="border-t border-white/10 px-6 py-32 lg:px-10"
+      className="border-t border-white/10 px-5 py-20 sm:px-6 sm:py-24 lg:px-10 lg:py-32"
     >
       <div className="mx-auto max-w-7xl">
         {/* Heading */}
@@ -110,19 +110,19 @@ function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-20 flex flex-col justify-between gap-6 md:flex-row md:items-end"
+          className="mb-12 flex flex-col justify-between gap-5 sm:mb-16 sm:gap-6 lg:mb-20 md:flex-row md:items-end"
         >
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-[var(--accent)]">
+            <p className="text-[10px] uppercase tracking-[0.28em] text-[var(--accent)] sm:text-xs sm:tracking-[0.3em]">
               04 / Engineering Stack
             </p>
 
-            <h2 className="mt-5 text-5xl font-semibold tracking-[-0.04em] text-white md:text-7xl">
+            <h2 className="mt-4 text-[2.8rem] font-semibold leading-[0.95] tracking-[-0.055em] text-white sm:mt-5 sm:text-5xl md:text-7xl">
               Skills<span className="text-white/20">.</span>
             </h2>
           </div>
 
-          <p className="max-w-md text-sm leading-relaxed text-white/40">
+          <p className="max-w-md text-xs leading-relaxed text-white/40 sm:text-sm">
             Technologies are tools. The real focus is building reliable backend
             systems, useful products and maintainable software.
           </p>
@@ -140,7 +140,7 @@ function Skills() {
                 duration: 0.5,
                 delay: index * 0.06,
               }}
-              className={`group relative bg-[#050505] p-7 transition duration-500 hover:bg-white/[0.025] md:p-9 ${
+              className={`group relative bg-[#050505] p-5 transition duration-500 hover:bg-white/[0.025] sm:p-7 md:p-9 ${
                 group.featured ? "md:col-span-2" : ""
               }`}
             >
@@ -150,36 +150,36 @@ function Skills() {
               <div
                 className={`${
                   group.featured
-                    ? "grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center"
+                    ? "grid gap-7 sm:gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center"
                     : ""
                 }`}
               >
                 {/* Heading */}
                 <div>
-                  <div className="flex items-center gap-4">
-                    <span className="font-mono text-[10px] text-white/20">
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <span className="font-mono text-[9px] text-white/20 sm:text-[10px]">
                       {group.number}
                     </span>
 
-                    <span className="h-px w-7 bg-white/10" />
+                    <span className="h-px w-6 bg-white/10 sm:w-7" />
                   </div>
 
-                  <h3 className="mt-5 text-2xl font-semibold tracking-tight text-white">
+                  <h3 className="mt-4 text-xl font-semibold leading-tight tracking-tight text-white sm:mt-5 sm:text-2xl">
                     {group.title}
                     <span className="text-[var(--accent)]">.</span>
                   </h3>
 
-                  <p className="mt-3 max-w-lg text-sm leading-relaxed text-white/35">
+                  <p className="mt-2.5 max-w-lg text-xs leading-relaxed text-white/35 sm:mt-3 sm:text-sm">
                     {group.description}
                   </p>
                 </div>
 
                 {/* Skills */}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {group.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="border border-white/10 px-3 py-2 text-[10px] uppercase tracking-[0.12em] text-white/40 transition duration-300 hover:border-white/25 hover:text-white/80"
+                      className="border border-white/10 px-2.5 py-1.5 text-[9px] uppercase tracking-[0.09em] text-white/40 transition duration-300 hover:border-white/25 hover:text-white/80 sm:px-3 sm:py-2 sm:text-[10px] sm:tracking-[0.12em]"
                     >
                       {skill}
                     </span>
@@ -196,11 +196,11 @@ function Skills() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-10 flex items-center gap-4"
+          className="mt-8 flex items-start gap-3 sm:mt-10 sm:items-center sm:gap-4"
         >
-          <span className="h-px w-12 bg-[var(--accent)]" />
+          <span className="mt-2 h-px w-8 shrink-0 bg-[var(--accent)] sm:mt-0 sm:w-12" />
 
-          <p className="text-xs uppercase tracking-[0.2em] text-white/25">
+          <p className="text-[9px] uppercase leading-relaxed tracking-[0.16em] text-white/25 sm:text-xs sm:tracking-[0.2em]">
             Backend first · Full-stack capable · Product minded
           </p>
         </motion.div>

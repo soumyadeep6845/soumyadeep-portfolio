@@ -84,7 +84,7 @@ function Impact() {
   return (
     <section
       id="impact"
-      className="border-t border-white/10 px-6 py-32 lg:px-10"
+      className="border-t border-white/10 px-5 py-18 sm:px-6 sm:py-24 lg:px-10 lg:py-32"
     >
       <div className="mx-auto max-w-7xl">
         {/* Heading */}
@@ -93,18 +93,19 @@ function Impact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-9 sm:mb-14 lg:mb-16"
         >
-          <p className="text-xs uppercase tracking-[0.3em] text-[var(--accent)]">
+          <p className="text-[10px] uppercase tracking-[0.28em] text-[var(--accent)] sm:text-xs sm:tracking-[0.3em]">
             01 / Impact
           </p>
 
-          <div className="mt-5 flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <h2 className="text-5xl font-semibold tracking-[-0.04em] text-white md:text-7xl">
-              Numbers that matter<span className="text-white/20">.</span>
+          <div className="mt-4 flex flex-col justify-between gap-4 sm:mt-5 sm:gap-6 md:flex-row md:items-end">
+            <h2 className="text-[2.6rem] font-semibold leading-[0.95] tracking-[-0.055em] text-white sm:text-5xl md:text-7xl">
+              Numbers that matter
+              <span className="text-white/20">.</span>
             </h2>
 
-            <p className="max-w-md text-sm leading-relaxed text-white/40">
+            <p className="max-w-md text-xs leading-relaxed text-white/40 sm:text-sm">
               Engineering work measured through performance, quality, automation
               and operational impact.
             </p>
@@ -112,7 +113,7 @@ function Impact() {
         </motion.div>
 
         {/* Metrics */}
-        <div className="grid gap-px overflow-hidden border border-white/10 bg-white/10 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-px overflow-hidden border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
           {metrics.map((metric, index) => (
             <motion.article
               key={metric.label}
@@ -123,7 +124,7 @@ function Impact() {
                 duration: 0.6,
                 delay: index * 0.08,
               }}
-              className="group relative bg-[#050505] p-7 transition duration-500 hover:bg-white/[0.025] md:p-8"
+              className="group relative bg-[#050505] p-5 transition duration-500 hover:bg-white/[0.025] sm:p-7 md:p-8"
             >
               {/* Hover accent */}
               <div className="absolute left-0 top-0 h-px w-0 bg-[var(--accent)] transition-all duration-500 group-hover:w-full" />
@@ -132,8 +133,8 @@ function Impact() {
                 0{index + 1}
               </span>
 
-              <div className="mt-12">
-                <p className="text-4xl font-semibold tracking-[-0.05em] text-white md:text-5xl">
+              <div className="mt-7 sm:mt-10 lg:mt-12">
+                <p className="text-4xl font-semibold tracking-[-0.05em] text-white sm:text-5xl">
                   <AnimatedNumber
                     value={metric.value}
                     suffix={metric.suffix}
@@ -141,11 +142,11 @@ function Impact() {
                   />
                 </p>
 
-                <p className="mt-3 text-[10px] uppercase tracking-[0.2em] text-[var(--accent)]">
+                <p className="mt-2.5 text-[9px] uppercase tracking-[0.18em] text-[var(--accent)] sm:mt-3 sm:text-[10px] sm:tracking-[0.2em]">
                   {metric.label}
                 </p>
 
-                <p className="mt-4 text-xs leading-relaxed text-white/30">
+                <p className="mt-3 text-xs leading-relaxed text-white/30 sm:mt-4">
                   {metric.description}
                 </p>
               </div>
