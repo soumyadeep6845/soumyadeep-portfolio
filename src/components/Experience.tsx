@@ -122,7 +122,7 @@ function Experience() {
   return (
     <section
       id="experience"
-      className="border-t border-white/10 px-6 py-32 lg:px-10"
+      className="border-t border-white/10 px-5 py-18 sm:px-6 sm:py-24 lg:px-10 lg:py-32"
     >
       <div className="mx-auto max-w-7xl">
         {/* Heading */}
@@ -131,18 +131,18 @@ function Experience() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-20"
+          className="mb-10 sm:mb-16 lg:mb-20"
         >
-          <p className="text-xs uppercase tracking-[0.3em] text-[var(--accent)]">
+          <p className="text-[10px] uppercase tracking-[0.28em] text-[var(--accent)] sm:text-xs sm:tracking-[0.3em]">
             03 / Experience
           </p>
 
-          <div className="mt-5 flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <h2 className="text-5xl font-semibold tracking-[-0.04em] text-white md:text-7xl">
+          <div className="mt-4 flex flex-col justify-between gap-4 sm:mt-5 sm:gap-6 md:flex-row md:items-end">
+            <h2 className="text-[2.8rem] font-semibold leading-[0.95] tracking-[-0.055em] text-white sm:text-5xl md:text-7xl">
               Experience<span className="text-white/20">.</span>
             </h2>
 
-            <p className="max-w-md text-sm leading-relaxed text-white/40">
+            <p className="max-w-md text-xs leading-relaxed text-white/40 sm:text-sm">
               Three years of building, improving and supporting software systems
               across backend, full-stack and enterprise environments.
             </p>
@@ -154,7 +154,7 @@ function Experience() {
           {/* Timeline */}
           <div className="absolute bottom-0 left-[19px] top-0 hidden w-px bg-white/10 md:block" />
 
-          <div className="space-y-5">
+          <div className="space-y-4 sm:space-y-5">
             {experiences.map((experience, index) => (
               <motion.article
                 key={`${experience.company}-${experience.period}`}
@@ -196,51 +196,53 @@ function Experience() {
                     />
                   )}
 
-                  <div className="p-7 md:p-9 lg:p-10">
+                  <div className="p-5 sm:p-7 md:p-9 lg:p-10">
                     {/* Top row */}
-                    <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
-                      <div className="flex gap-5">
-                        <span className="pt-1 font-mono text-xs text-white/20">
+                    <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between lg:gap-6">
+                      <div className="flex gap-4 sm:gap-5">
+                        <span className="pt-1 font-mono text-[10px] text-white/20 sm:text-xs">
                           {experience.number}
                         </span>
 
-                        <div>
-                          <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-                            <h3 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
+                        <div className="min-w-0">
+                          <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5 sm:gap-x-3 sm:gap-y-2">
+                            <h3 className="text-xl font-semibold tracking-tight text-white sm:text-2xl md:text-3xl">
                               {experience.role}
                             </h3>
 
-                            <span className="text-white/20">·</span>
+                            <span className="hidden text-white/20 sm:inline">
+                              ·
+                            </span>
 
-                            <span className="text-sm font-medium text-[var(--accent)]">
+                            <span className="text-xs font-medium text-[var(--accent)] sm:text-sm">
                               {experience.company}
                             </span>
                           </div>
 
-                          <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-white/30">
+                          <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-[10px] text-white/30 sm:gap-x-4 sm:text-xs">
                             <span>{experience.location}</span>
                             <span>{experience.type}</span>
                           </div>
                         </div>
                       </div>
 
-                      <span className="shrink-0 font-mono text-[10px] tracking-[0.12em] text-white/25">
+                      <span className="shrink-0 pl-8 font-mono text-[9px] tracking-[0.1em] text-white/25 sm:text-[10px] sm:tracking-[0.12em] lg:pl-0">
                         {experience.period}
                       </span>
                     </div>
 
                     {/* Summary */}
-                    <p className="mt-8 max-w-3xl text-sm leading-relaxed text-white/45 md:text-base">
+                    <p className="mt-5 max-w-3xl text-xs leading-relaxed text-white/45 sm:mt-8 sm:text-sm md:text-base">
                       {experience.summary}
                     </p>
 
                     {/* Metrics */}
-                    <div className="mt-9 grid border-y border-white/10 md:grid-cols-3">
+                    <div className="mt-6 grid border-y border-white/10 sm:mt-9 md:grid-cols-3">
                       {experience.achievements.map(
                         (achievement, achievementIndex) => (
                           <div
                             key={achievement.label}
-                            className={`py-6 ${
+                            className={`py-5 sm:py-6 ${
                               achievementIndex !== 0
                                 ? "border-t border-white/10 md:border-l md:border-t-0"
                                 : ""
@@ -251,15 +253,15 @@ function Experience() {
                                 : ""
                             } ${achievementIndex !== 0 ? "md:pl-7" : ""}`}
                           >
-                            <p className="text-2xl font-semibold tracking-tight text-white">
+                            <p className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
                               {achievement.metric}
                             </p>
 
-                            <p className="mt-1 text-[9px] uppercase tracking-[0.18em] text-[var(--accent)]">
+                            <p className="mt-1 text-[8px] uppercase tracking-[0.16em] text-[var(--accent)] sm:text-[9px] sm:tracking-[0.18em]">
                               {achievement.label}
                             </p>
 
-                            <p className="mt-3 text-xs leading-relaxed text-white/35">
+                            <p className="mt-2.5 text-[11px] leading-relaxed text-white/35 sm:mt-3 sm:text-xs">
                               {achievement.description}
                             </p>
                           </div>
@@ -268,11 +270,11 @@ function Experience() {
                     </div>
 
                     {/* Technologies */}
-                    <div className="mt-7 flex flex-wrap gap-x-5 gap-y-2">
+                    <div className="mt-5 flex flex-wrap gap-x-4 gap-y-2 sm:mt-7 sm:gap-x-5">
                       {experience.technologies.map((technology) => (
                         <span
                           key={technology}
-                          className="text-[10px] uppercase tracking-[0.14em] text-white/25"
+                          className="text-[9px] uppercase tracking-[0.12em] text-white/25 sm:text-[10px] sm:tracking-[0.14em]"
                         >
                           {technology}
                         </span>

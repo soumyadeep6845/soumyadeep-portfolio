@@ -31,7 +31,7 @@ function Achievements() {
   return (
     <section
       id="achievements"
-      className="border-t border-white/10 px-6 py-32 lg:px-10"
+      className="border-t border-white/10 px-5 py-20 sm:px-6 sm:py-24 lg:px-10 lg:py-32"
     >
       <div className="mx-auto max-w-7xl">
         <motion.div
@@ -39,13 +39,13 @@ function Achievements() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-12 sm:mb-16"
         >
-          <p className="text-xs uppercase tracking-[0.3em] text-[var(--accent)]">
+          <p className="text-[10px] uppercase tracking-[0.28em] text-[var(--accent)] sm:text-xs sm:tracking-[0.3em]">
             05 / Recognition
           </p>
 
-          <h2 className="mt-5 text-5xl font-semibold tracking-[-0.04em] text-white md:text-7xl">
+          <h2 className="mt-4 text-[2.8rem] font-semibold leading-none tracking-[-0.05em] text-white sm:mt-5 sm:text-5xl md:text-7xl">
             Proof of Work<span className="text-white/20">.</span>
           </h2>
         </motion.div>
@@ -61,31 +61,31 @@ function Achievements() {
                 duration: 0.5,
                 delay: index * 0.08,
               }}
-              className="group relative bg-[#050505] p-7 transition duration-500 hover:bg-white/[0.025] md:p-9"
+              className="group relative bg-[#050505] p-5 transition duration-500 hover:bg-white/[0.025] sm:p-7 md:p-9"
             >
               {/* Accent */}
               <div className="absolute left-0 top-0 h-px w-0 bg-[var(--accent)] transition-all duration-500 group-hover:w-full" />
 
-              <div className="flex items-center justify-between">
-                <span className="font-mono text-[10px] text-white/20">
+              <div className="flex items-start justify-between gap-4">
+                <span className="shrink-0 font-mono text-[10px] text-white/20">
                   {achievement.number}
                 </span>
 
-                <span className="text-[9px] uppercase tracking-[0.2em] text-white/20">
+                <span className="text-right text-[8px] uppercase tracking-[0.18em] text-white/20 sm:text-[9px] sm:tracking-[0.2em]">
                   {achievement.label}
                 </span>
               </div>
 
-              <div className="mt-14">
-                <p className="text-5xl font-semibold tracking-[-0.05em] text-white">
+              <div className="mt-10 sm:mt-14">
+                <p className="text-4xl font-semibold tracking-[-0.05em] text-white sm:text-5xl">
                   {achievement.value}
                 </p>
 
-                <h3 className="mt-5 text-lg font-medium text-white/80">
+                <h3 className="mt-4 text-base font-medium leading-snug text-white/80 sm:mt-5 sm:text-lg">
                   {achievement.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-relaxed text-white/35">
+                <p className="mt-3 text-xs leading-relaxed text-white/35 sm:text-sm">
                   {achievement.description}
                 </p>
               </div>
