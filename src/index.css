@@ -21,7 +21,11 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
   background: var(--background);
+
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.15) #050505;
 }
 
 body {
@@ -44,6 +48,10 @@ a {
   text-decoration: none;
 }
 
+/* -------------------------------- */
+/* Subtle film grain                 */
+/* -------------------------------- */
+
 body::before {
   content: "";
   position: fixed;
@@ -53,4 +61,61 @@ body::before {
   opacity: 0.025;
 
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.5'/%3E%3C/svg%3E");
+}
+
+/* -------------------------------- */
+/* Custom scrollbar                  */
+/* -------------------------------- */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* -------------------------------- */
+/* Keyboard accessibility            */
+/* -------------------------------- */
+
+:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* -------------------------------- */
+/* Image rendering                   */
+/* -------------------------------- */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* -------------------------------- */
+/* Reduced motion                    */
+/* -------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
