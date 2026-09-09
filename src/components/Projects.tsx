@@ -7,9 +7,9 @@ const projects = [
     name: "AI Code Review Assistant",
     category: "AI · BACKEND · FULL-STACK",
     description:
-      "An AI-powered code review platform that analyzes source code and generates structured feedback, with caching and asynchronous processing designed to reduce repeated AI API calls and improve scalability.",
+      "An AI-powered code review platform that analyzes source code, generates automated review feedback, and provides secure role-based access through REST APIs.",
     problem:
-      "Automating repetitive code-review feedback while keeping API usage efficient and the review workflow responsive.",
+      "Automating repetitive code-review feedback while providing a secure and responsive developer experience.",
     stack: [
       "Java 17",
       "Spring Boot",
@@ -17,56 +17,48 @@ const projects = [
       "TypeScript",
       "MySQL",
       "Redis",
-      "Kafka",
       "Docker",
+      "JUnit",
+      "Mockito",
       "JWT",
-      "AWS",
     ],
     highlights: [
       "AI-powered automated code analysis",
-      "Redis-based review caching",
-      "Kafka-based asynchronous processing",
-      "JWT authentication with Spring Security",
-      "Dockerized application architecture",
+      "JWT authentication and authorization with Spring Security",
+      "Redis caching for generated review results",
+      "Responsive React UI with CodeMirror",
+      "Dockerized microservices architecture",
     ],
-    github: "#",
-    demo: "#",
+    github: "https://github.com/soumyadeep6845/code-review-assistant-backend",
+    demo: "https://youtu.be/KdJRcu-eE5Y?si=bly3o9mi56yKppkr",
   },
+
   {
     number: "02",
     featured: false,
     name: "YouTube Playlist Tracker",
     category: "FULL-STACK · API · DATA",
     description:
-      "A full-stack application that integrates with the YouTube API to track and organize playlist information through a Spring Boot backend and React frontend.",
+      "A full-stack application built around the YouTube API to retrieve, manage and interact with playlist information through a Spring Boot backend and React frontend.",
     problem:
       "Making playlist information easier to retrieve, organize and interact with through a dedicated application.",
-    stack: [
-      "Java",
-      "Spring Boot",
-      "React",
-      "MySQL",
-      "YouTube API",
-    ],
+    stack: ["Java", "Spring Boot", "React", "MySQL", "YouTube API"],
     highlights: [
       "Spring Boot REST backend",
       "YouTube API integration",
       "React-based frontend",
       "MySQL persistence",
     ],
-    github: "#",
-    demo: "#",
+    github:
+      "https://github.com/soumyadeep6845/youtube-playlist-tracker-backend",
+    demo: "https://github.com/soumyadeep6845/youtube-playlist-tracker-backend",
   },
 ];
 
 function Projects() {
   return (
-    <section
-      id="work"
-      className="border-t border-white/10 px-6 py-32 lg:px-10"
-    >
+    <section id="work" className="border-t border-white/10 px-6 py-32 lg:px-10">
       <div className="mx-auto max-w-7xl">
-
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -76,7 +68,7 @@ function Projects() {
           className="mb-24"
         >
           <p className="mb-4 text-xs uppercase tracking-[0.3em] text-white/30">
-            03 / Selected Work
+            02 / Selected Work
           </p>
 
           <h2 className="max-w-4xl text-5xl font-bold leading-[0.95] tracking-[-0.05em] md:text-7xl">
@@ -88,7 +80,6 @@ function Projects() {
 
         {/* Projects */}
         <div className="space-y-16">
-
           {projects.map((project, index) => (
             <motion.article
               key={project.name}
@@ -103,12 +94,9 @@ function Projects() {
             >
               <div
                 className={`overflow-hidden border border-white/10 ${
-                  project.featured
-                    ? "bg-white/[0.025]"
-                    : "bg-white/[0.015]"
+                  project.featured ? "bg-white/[0.025]" : "bg-white/[0.015]"
                 }`}
               >
-
                 {/* Project top bar */}
                 <div className="flex items-center justify-between border-b border-white/10 px-6 py-4 md:px-8">
                   <span className="text-xs tracking-[0.2em] text-white/30">
@@ -122,10 +110,8 @@ function Projects() {
 
                 {/* Project content */}
                 <div className="grid lg:grid-cols-[1.1fr_0.9fr]">
-
                   {/* Left */}
                   <div className="p-8 md:p-12 lg:p-16">
-
                     <h3
                       className={`font-semibold tracking-[-0.04em] ${
                         project.featured
@@ -175,7 +161,6 @@ function Projects() {
 
                   {/* Right */}
                   <div className="border-t border-white/10 p-8 md:p-12 lg:border-l lg:border-t-0 lg:p-16">
-
                     <div>
                       <p className="mb-6 text-xs uppercase tracking-[0.2em] text-white/30">
                         Engineering Highlights
@@ -183,10 +168,7 @@ function Projects() {
 
                       <div className="space-y-4">
                         {project.highlights.map((highlight) => (
-                          <div
-                            key={highlight}
-                            className="flex gap-3"
-                          >
+                          <div key={highlight} className="flex gap-3">
                             <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-white/30" />
 
                             <p className="text-sm leading-relaxed text-white/60">
@@ -214,15 +196,11 @@ function Projects() {
                         ))}
                       </div>
                     </div>
-
                   </div>
-
                 </div>
-
               </div>
             </motion.article>
           ))}
-
         </div>
       </div>
     </section>

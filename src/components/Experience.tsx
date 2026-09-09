@@ -43,15 +43,15 @@ const experiences = [
   },
   {
     period: "JAN 2022 — APR 2022",
-    role: "Software Developer Intern",
-    company: "HighRadius",
+    role: "Software Developer",
+    company: "HighRadius · Internship",
     location: "Bhubaneswar, Odisha · Remote",
     description:
-      "Completed an intensive 10-week training program focused on building a comprehensive full-stack B2B invoice application.",
+      "Completed the Highway to HighRadius Internship Program, building and deploying an AI-enabled Fintech B2B cloud application as a full-stack web-based product.",
     achievements: [
-      "Developed a full-stack B2B invoice application as part of an intensive product development program.",
-      "Worked with Java, JDBC, React.js, HTML and CSS to build application functionality across the stack.",
-      "Integrated machine learning models with the application to support intelligent invoice-processing capabilities.",
+      "Built and deployed an AI-enabled Fintech B2B cloud application.",
+      "Worked across the full-stack product development lifecycle, including user requirements, user experience and application design.",
+      "Developed data models and machine learning models alongside UI components and backend design.",
     ],
     technologies: [
       "Java",
@@ -81,7 +81,7 @@ function Experience() {
           className="mb-24"
         >
           <p className="mb-4 text-xs uppercase tracking-[0.3em] text-white/30">
-            02 / Experience
+            03 / Experience
           </p>
 
           <h2 className="max-w-4xl text-5xl font-bold leading-[0.95] tracking-[-0.05em] md:text-7xl">

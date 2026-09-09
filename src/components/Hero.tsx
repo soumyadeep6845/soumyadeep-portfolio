@@ -19,7 +19,6 @@ function Hero() {
       </div>
 
       <div className="relative mx-auto w-full max-w-7xl">
-
         {/* Status */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
@@ -36,7 +35,6 @@ function Hero() {
 
         {/* Main heading */}
         <div className="max-w-5xl">
-
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -54,21 +52,19 @@ function Hero() {
           >
             DAS<span className="text-white">.</span>
           </motion.h1>
-
         </div>
 
         {/* Bottom information */}
         <div className="mt-16 grid gap-10 md:grid-cols-2">
-
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
             className="max-w-xl text-lg leading-relaxed text-white/50 md:text-xl"
           >
-            Full-Stack Software Engineer with a strong backend focus,
-            building scalable applications with Java, Spring Boot,
-            distributed systems and modern web technologies.
+            Full-Stack Software Engineer. <br />
+            Backend-focused, with experience building scalable microservices,
+            React applications and AI-powered solutions.
           </motion.p>
 
           <motion.div
@@ -91,9 +87,7 @@ function Hero() {
               Let's talk ↗
             </a>
           </motion.div>
-
         </div>
-
       </div>
 
       {/* Scroll indicator */}
@@ -120,7 +114,6 @@ function Hero() {
           </motion.div>
         </div>
       </motion.div>
-
     </section>
   );
 }
